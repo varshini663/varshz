@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: Default
+
+steps:
+- script: echo My first pipeline!
+  displayName: 'Run a one-line script'
+- script: echo 'gradle build'
+  displayName: 'build gradle app'
+- script: 'gradle run'
+  displayName: 'Running gradle'
+
